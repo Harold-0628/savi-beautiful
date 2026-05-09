@@ -1,0 +1,194 @@
+:root {
+    --gold: #c5a47e;
+    --metallic-pink: #d87093;
+    --dark: #0a0a0a;
+    --white: #ffffff;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: url('image_ba04f5.jpg') center/cover no-repeat fixed;
+    color: var(--dark);
+}
+
+/* HEADER DINÁMICO (Logo centrado -> Izquierda) */
+.luxury-nav {
+    position: fixed; top: 0; width: 100%; z-index: 1000;
+    background: var(--white); border-bottom: 3px solid var(--gold);
+    padding: 25px 0; transition: 0.5s ease;
+}
+
+.header-container {
+    display: flex; flex-direction: column; align-items: center;
+    max-width: 1200px; margin: 0 auto; transition: 0.5s ease;
+}
+
+.logo-main { width: 280px; transition: 0.5s ease; }
+
+nav ul { display: flex; list-style: none; gap: 30px; margin-top: 15px; transition: 0.5s ease; }
+nav ul li a { text-decoration: none; color: var(--dark); font-weight: 700; font-size: 0.75rem; letter-spacing: 2px; text-transform: uppercase; }
+
+/* Estado cuando el usuario scrolea */
+.luxury-nav.scrolled { padding: 10px 5%; }
+.luxury-nav.scrolled .header-container { flex-direction: row; justify-content: space-between; }
+.luxury-nav.scrolled .logo-main { width: 110px; }
+.luxury-nav.scrolled nav ul { margin-top: 0; }
+
+/* HERO Y BOTÓN CENTRADO */
+.hero-premium { height: 100vh; display: flex; align-items: center; justify-content: center; padding-top: 100px; }
+.hero-inner {
+    background: var(--white); padding: 60px; text-align: center;
+    border: 4px solid var(--metallic-pink); box-shadow: 15px 15px 0px var(--gold);
+    max-width: 850px;
+}
+.hero-inner h1 { font-family: 'Cormorant Garamond', serif; font-size: 3.8rem; margin-bottom: 10px; }
+.metallic-pink-text { color: var(--metallic-pink); letter-spacing: 5px; font-weight: 700; display: block; margin-bottom: 10px; }
+.btn-insta-centered {
+    display: inline-block; background: var(--dark); color: white;
+    padding: 15px 40px; text-decoration: none; font-weight: bold;
+    border: 2px solid var(--gold); letter-spacing: 2px; transition: 0.3s;
+}
+.btn-insta-centered:hover { background: var(--metallic-pink); border-color: var(--white); }
+
+/* BENEFICIOS STRIP */
+.benefits-strip { background: var(--dark); color: var(--white); display: flex; justify-content: space-around; padding: 40px 10%; }
+.benefit-item { text-align: center; }
+.benefit-item span { font-size: 2rem; display: block; margin-bottom: 5px; }
+.benefit-item p { font-size: 0.75rem; letter-spacing: 1px; text-transform: uppercase; }
+
+/* PRODUCTOS */
+.sub-title { text-align: center; font-family: 'Cormorant Garamond', serif; font-size: 3.5rem; margin: 100px 0 50px 0; letter-spacing: 5px; text-transform: uppercase; }
+.product-row { display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; padding-bottom: 80px; }
+.product-item { background: var(--white); width: 320px; padding: 30px; text-align: center; border-bottom: 5px solid var(--gold); cursor: pointer; transition: 0.3s; }
+.product-item img { width: 100%; height: 280px; object-fit: contain; }
+
+/* RESEÑAS CENTRADAS */
+.reviews-section { padding: 100px 5%; text-align: center; background: rgba(255,255,255,0.9); }
+.reviews-container-centered { max-width: 700px; margin: 0 auto; }
+.review-form { background: white; padding: 40px; border: 1px solid var(--gold); margin-bottom: 40px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
+.review-form input, .review-form textarea, .review-form select { width: 100%; margin-bottom: 15px; padding: 12px; border: 1px solid #ddd; }
+.star-rating { font-size: 2.5rem; color: #ddd; display: flex; flex-direction: row-reverse; justify-content: center; cursor: pointer; margin-bottom: 15px; }
+.star:hover, .star:hover ~ .star, .star.active, .star.active ~ .star { color: var(--gold); }
+.review-card { background: white; padding: 25px; border-left: 6px solid var(--metallic-pink); margin-bottom: 20px; text-align: left; }
+
+/* LA MARCA CENTRADA CON RECUADRO ROSA */
+.manifesto { padding: 100px 5%; text-align: center; }
+.section-header-gold { color: var(--gold); letter-spacing: 10px; font-family: 'Cormorant Garamond', serif; font-size: 3rem; margin-bottom: 40px; text-transform: uppercase; }
+.manifesto-centered-box {
+    max-width: 800px; margin: 0 auto; background: var(--white);
+    border: 4px solid var(--metallic-pink); padding: 60px;
+    box-shadow: 15px 15px 0px var(--gold);
+}
+.m-content h4 { font-family: 'Cormorant Garamond', serif; font-size: 2.2rem; color: var(--gold); margin-bottom: 10px; }
+.m-spacer { height: 40px; }
+
+/* FOOTER NEGRO Y DORADO */
+.social-contact { padding: 120px 5%; display: flex; justify-content: center; }
+.black-gold-box {
+    background: var(--dark); color: var(--white); padding: 60px;
+    border: 4px solid var(--gold); width: 100%; max-width: 750px; text-align: center;
+}
+.location-text { font-size: 1.3rem; letter-spacing: 2px; font-weight: 500; }
+.ig-btn-gold {
+    display: inline-block; padding: 15px 45px; border: 2px solid var(--gold);
+    color: var(--gold); text-decoration: none; font-weight: bold; letter-spacing: 3px; margin-top: 30px; transition: 0.3s;
+}
+.ig-btn-gold:hover { background: var(--gold); color: var(--dark); }
+
+/* MODAL PRODUCTO */
+.modal { display: none; position: fixed; z-index: 2000; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); }
+.modal-content { background: white; margin: 5% auto; padding: 40px; width: 90%; max-width: 850px; border: 8px solid var(--gold); position: relative; }
+.modal-body { display: flex; gap: 40px; align-items: center; flex-wrap: wrap; }
+.modal-body img { width: 350px; height: auto; }
+.modal-info { flex: 1; text-align: left; }
+.modal-price { font-size: 2.2rem; color: var(--metallic-pink); font-weight: bold; display: block; margin: 20px 0; }
+.close { position: absolute; right: 20px; top: 10px; font-size: 2.5rem; cursor: pointer; }
+.gold-divider { width: 60px; height: 3px; background: var(--gold); margin: 20px auto; }
+/* --- ESTILOS DE RELLENO ESTRATÉGICO --- */
+
+/* Bloque de Frase */
+.quote-block {
+    padding: 120px 10%;
+    text-align: center;
+    background: var(--white);
+}
+.quote-text {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.5rem;
+    font-style: italic;
+    color: var(--dark);
+    max-width: 900px;
+    margin: 0 auto;
+}
+.quote-author {
+    display: block;
+    margin-top: 20px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    color: var(--gold);
+}
+
+/* Pasos de Rutina */
+.routine-steps {
+    padding: 80px 5%;
+    background: #fdfdfd;
+}
+.steps-grid {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+.step-card {
+    background: white;
+    padding: 40px;
+    width: 300px;
+    text-align: center;
+    border: 1px solid #eee;
+    transition: 0.3s;
+}
+.step-card:hover { border-color: var(--gold); transform: translateY(-5px); }
+.step-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 3rem;
+    color: var(--metallic-pink);
+    display: block;
+    margin-bottom: 15px;
+    opacity: 0.5;
+}
+.step-card h3 { margin-bottom: 15px; letter-spacing: 2px; }
+.step-card p { font-size: 0.9rem; color: #666; }
+
+/* FAQ Section */
+.faq-section {
+    padding: 100px 10%;
+    background: var(--white);
+}
+.faq-container {
+    max-width: 800px;
+    margin: 40px auto 0;
+    text-align: left;
+}
+.faq-item {
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #f0f0f0;
+}
+.faq-item h4 {
+    color: var(--dark);
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+.faq-item p {
+    color: #777;
+    font-size: 0.95rem;
+}
+
+/* Espaciado extra global para que respire la página */
+section {
+    margin-bottom: 20px;
+}

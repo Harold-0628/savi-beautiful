@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Savi Beautiful | Luxury Skincare</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="luxury-nav" id="mainHeader">
+        <div class="header-container">
+            <div class="logo-wrapper">
+                <img src="logo.png" alt="Savi Beautiful" class="logo-main" id="logo">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#inicio">Home</a></li>
+                    <li><a href="#productos">Colección</a></li>
+                    <li><a href="#reseñas">Reseñas</a></li>
+                    <li><a href="#nosotros">La Marca</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="inicio" class="hero-premium">
+        <div class="hero-inner">
+            <span class="metallic-pink-text">Savi Beautiful Empresa 100% Chiapaneca</span>
+            <h1>Revela tu verdadera esencia</h1>
+            <div class="gold-divider"></div>
+        
+            <div class="hero-btns">
+                <a href="#contacto" class="btn-insta-centered">Visitar Instagram</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ... (Header y Hero se mantienen igual) ... -->
+
+    <!-- BLOQUE DE RELLENO 1: FRASE INSPIRACIONAL -->
+    <section class="quote-block">
+        <div class="quote-container">
+            <p class="quote-text">"La verdadera belleza comienza en el momento en que decides ser tú mismo."</p>
+            <span class="quote-author">— Savi Beautiful Philosophy</span>
+        </div>
+    </section>
+
+    <!-- ... (Sección de Beneficios se mantiene igual) ... -->
+
+    <!-- BLOQUE DE RELLENO 2: PASOS DE RUTINA (Visualmente atractivo) -->
+    <section class="routine-steps">
+        <h2 class="section-header-gold">TU RITUAL SAVI</h2>
+        <div class="steps-grid">
+            <div class="step-card">
+                <span class="step-num">01</span>
+                <h3>Limpieza</h3>
+                <p>Purifica tu rostro con nuestros jabones artesanales según tu tipo de piel.</p>
+            </div>
+            <div class="step-card">
+                <span class="step-num">02</span>
+                <h3>Tratamiento</h3>
+                <p>Aplica el Gel Secante en las zonas localizadas para una acción rápida.</p>
+            </div>
+            <div class="step-card">
+                <span class="step-num">03</span>
+                <h3>Protección</h3>
+                <p>Sella tu rutina y luce una piel radiante durante todo el día.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ... (Sección de Productos se mantiene igual) ... -->
+
+    <!-- BLOQUE DE RELLENO 3: PREGUNTAS FRECUENTES (FAQ) -->
+    <section class="faq-section">
+        <h2 class="section-header-gold">DUDAS FRECUENTES</h2>
+        <div class="faq-container">
+            <div class="faq-item">
+                <h4>¿Qué servicios ofrecemos?</h4>
+                <p>Ofrecemos productos para la belleza cutanea, nos preocupamos por mantener los margenes de calidad mas altos del estado.</p>
+            </div>
+            <div class="faq-item">
+                <h4>¿Son productos naturales?</h4>
+                <p>Nuestras fórmulas combinan lo mejor de la naturaleza con ciencia dermatológica de vanguardia.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ... (Secciones de Reseñas, Marca y Footer se mantienen igual) ... -->
+
+    <!-- Beneficios para llenar la página -->
+    <section class="benefits-strip">
+        <div class="benefit-item"><span>✨</span><p>Cruelty Free</p></div>
+        <div class="benefit-item"><span>🌿</span><p>Natural</p></div>
+        <div class="benefit-item"><span>🧪</span><p>Dermatológico</p></div>
+        <div class="benefit-item"><span>💎</span><p>Premium</p></div>
+    </section>
+
+    <section id="productos" class="collection-section">
+        <h2 class="sub-title">Los Esenciales</h2>
+        <div class="product-row">
+            <div class="product-item" onclick="openProduct('Gel Secante', 'Fórmula de acción rápida para imperfecciones activas.', 'gel-secante.png')">
+                <img src="gel-secante.png" alt="Gel Secante">
+                <h3>Gel Secante</h3>
+                <p class="mini-desc">Adiós a las imperfecciones en tiempo récord.</p>
+            </div>
+            <div class="product-item" onclick="openProduct('Jabón Piel Normal', 'Limpieza profunda que mantiene la frescura.', 'jabon-normal.png')">
+                <img src="jabon-normal.png" alt="Piel Normal">
+                <h3>Piel Normal</h3>
+                <p class="mini-desc">Equilibrio perfecto para tu rostro diario.</p>
+            </div>
+            <div class="product-item" onclick="openProduct('Jabón Piel Grasa', 'Control inteligente de sebo y reducción de brillo.', 'jabon-grasa.png')">
+                <img src="jabon-grasa.png" alt="Piel Grasa">
+                <h3>Piel Grasa</h3>
+                <p class="mini-desc">Mate absoluto y pureza en cada poro.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="reseñas" class="reviews-section">
+        <h2 class="section-header-gold">EXPERIENCIAS SAVI</h2>
+        <div class="reviews-container-centered">
+            <div class="review-form">
+                <h3>Deja tu opinión</h3>
+                <select id="revProduct">
+                    <option value="Gel Secante">Gel Secante</option>
+                    <option value="Piel Normal">Piel Normal</option>
+                    <option value="Piel Grasa">Piel Grasa</option>
+                </select>
+                <div class="star-rating">
+                    <span class="star" data-value="5">&#9733;</span>
+                    <span class="star" data-value="4">&#9733;</span>
+                    <span class="star" data-value="3">&#9733;</span>
+                    <span class="star" data-value="2">&#9733;</span>
+                    <span class="star" data-value="1">&#9733;</span>
+                </div>
+                <input type="text" id="revName" placeholder="Tu Nombre">
+                <textarea id="revText" placeholder="Cuéntanos tu experiencia..."></textarea>
+                <button onclick="saveReview()" class="btn-luxury">Publicar Reseña</button>
+            </div>
+            <div id="reviewList" class="review-display-area"></div>
+        </div>
+    </section>
+
+    <section id="nosotros" class="manifesto">
+        <h2 class="section-header-gold">LA MARCA</h2>
+        <div class="manifesto-centered-box">
+            <div class="m-content">
+                <h4>Nuestra Misión</h4>
+                <p>Ofrecer beneficios de alta pureza para transformar imperfecciones en perfección.</p>
+                <div class="m-spacer"></div>
+                <h4>Nuestra Visión</h4>
+                <p>Ser el estándar de belleza mundial, embelleciendo a cada persona.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contacto" class="social-contact">
+        <div class="black-gold-box">
+            <p class="location-text">Tuxtla Gutiérrez, Chiapas, México</p>
+            <div class="gold-divider"></div>
+            <a href="https://www.instagram.com/savi_beautiful" target="_blank" class="ig-btn-gold">SÍGUENOS EN INSTAGRAM</a>
+        </div>
+    </footer>
+
+    <div id="productModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div class="modal-body">
+                <img id="modalImg" src="" alt="Producto">
+                <div class="modal-info">
+                    <h2 id="modalTitle"></h2>
+                    <p id="modalDesc"></p>
+                    <span class="modal-price">$120 MXN</span>
+                    <a href="https://www.instagram.com/savi_beautiful" class="btn-buy">Ordenar vía Instagram</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
